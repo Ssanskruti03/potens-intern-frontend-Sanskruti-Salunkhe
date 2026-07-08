@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    @apply text-[16px] antialiased;
+  }
+
+  body {
+    @apply bg-secondary text-[#2C2C2C] min-h-screen;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-white;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold 
+           transition-all duration-200 hover:bg-primary-light 
+           active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-dark text-primary px-6 py-3 rounded-xl font-semibold 
+           transition-all duration-200 hover:bg-secondary 
+           active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-secondary-dark/30 
+           transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-secondary-dark/50 
+           bg-white text-[#2C2C2C] placeholder:text-[#6B6B6B]/60
+           focus:border-primary focus:outline-none transition-all duration-200;
+  }
+
+  .label-text {
+    @apply block text-sm font-semibold text-[#2C2C2C] mb-2;
+  }
+
+  .step-indicator {
+    @apply flex items-center justify-center gap-2 mb-6;
+  }
+
+  .step-dot {
+    @apply w-2.5 h-2.5 rounded-full transition-all duration-300;
+  }
+
+  .step-dot-active {
+    @apply bg-primary w-8;
+  }
+
+  .step-dot-completed {
+    @apply bg-primary/40;
+  }
+
+  .step-dot-inactive {
+    @apply bg-secondary-dark/40;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+/* Add this at the end of your index.css file */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* For the modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Line clamp utility for description preview */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+}
