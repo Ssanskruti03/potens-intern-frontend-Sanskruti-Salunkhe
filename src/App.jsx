@@ -1,3 +1,4 @@
+// Civic Report PWA - Main Application
 import React, { useState, useEffect } from 'react';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import StepIndicator from './components/StepIndicator';
