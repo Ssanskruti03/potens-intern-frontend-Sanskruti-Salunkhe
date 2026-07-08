@@ -436,4 +436,8 @@ React and Tailwind communities
 Web Speech API for voice capabilities
 
 Open-source contributors who make development easier
+🔗 Links
+GitHub Repository: https://github.com/Ssanskruti03/potens-intern-frontend-Sanskruti-Salunkhe
+
+Live Demo: https://www.loom.com/share/b185b9d4d8ac49229295fd65a2a933c0
 
